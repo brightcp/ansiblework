@@ -1,0 +1,20 @@
+# Ansible inventory file
+
+#########################################################
+# Exhaustive list of hosts (for the Ansible "all" target)
+#########################################################
+
+deployserver-joe ansible_ssh_private_key_file=~/.ssh/id_rsa-aws
+
+###########
+# Groups
+###########
+
+[appservers]
+deployserver-joe ansible_ssh_private_key_file=~/.ssh/id_rsa-aws
+
+[dbservers]
+deployserver-joe ansible_ssh_private_key_file=~/.ssh/id_rsa-aws
+
+[yumrepos]
+deployserver-joe ansible_ssh_private_key_file=~/.ssh/id_rsa-aws
