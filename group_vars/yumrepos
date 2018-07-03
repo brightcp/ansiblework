@@ -1,0 +1,9 @@
+    ---
+
+    yumrepo_fqdn: deployserver-joe
+    yumrepo_path: /opt/yumrepo
+
+    cci_username: brightcp
+    cci_token: 6b1ba979aad85ce8ec53fdce79d690aa5f0e5b45
+    cci_project: pingtest
+    cci_branch: master
