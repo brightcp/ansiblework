@@ -1,3 +1,4 @@
-    - Datadog.datadog
-    - geerlingguy.mysql
-    - hxpro.nginx
+- PaloAltoNetworks.paloaltonetworks
+- Datadog.datadog
+- geerlingguy.mysql
+- hxpro.nginx
