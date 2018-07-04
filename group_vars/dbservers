@@ -1,16 +1,22 @@
-    ---
+---
 
-    mysql_user_home: /root
-    mysql_user_name: root
-    mysql_user_password: supersecret
-    mysql_root_password_update: no
-    mysql_enabled_on_startup: yes
-    mysql_port: "3306"
-    mysql_bind_address: '0.0.0.0'
-    mysql_databases:
-      - name: appdb
-    mysql_users:
-      - name: user
-        host: "%"
-        password: supersecret
-        priv: "appdb.*:ALL"
+mysql_user_home: /root
+mysql_user_name: root
+mysql_user_password: supersecret
+mysql_root_password_update: no
+mysql_enabled_on_startup: yes
+mysql_port: "3306"
+mysql_bind_address: '0.0.0.0'
+mysql_databases:
+  - name: appdb
+mysql_users:
+  - name: user
+    host: "%"
+    password: !vault |
+          $ANSIBLE_VAULT;1.1;AES256
+          39363861643731396330323135346138326533633034383439323131353161663532616437373231
+          3038336566303966353435333162323634363934616163660a653862343732386364383363663536
+          66626132623565636138353938323334346232373661663639356666363861383561353862386436
+          6663303862353666350a376338393665363538386438633230633634303164303762643639333764
+          6632
+    priv: "appdb.*:ALL"
